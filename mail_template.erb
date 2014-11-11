@@ -1,19 +1,13 @@
-<h1>Hello,</h1>
-
-<br>
-<br>
+<p>Hello,</p>
 
 <p>Here are some pull requests for <%= ENV['SEARCH_USER'] %> that you might want to give a look to:</p>
 
 <ul>
-<% @issues.items.map do |item| %>
-  <li>
-    <a href="<%= item.pull_request.html_url %>"><%= item.title %></a> by <%= item.user.login %>
-  </li>
-<% end %>
+  <% issues.items.map do |item| %>
+    <li>
+      <a href="<%= item.pull_request.html_url %>"><%= item.title %></a> by <%= item.user.login %>
+    </li>
+  <% end %>
 </ul>
-
-<br>
-<br>
 
 <p>The Github Nice Guy.</p>
