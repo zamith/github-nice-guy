@@ -3,7 +3,7 @@
 <br>
 <br>
 
-<p>Here are some pull requests for <%= @user %> that you might want to give a look to:</p>
+<p>Here are some pull requests for <%= ENV['SEARCH_USER'] %> that you might want to give a look to:</p>
 
 <ul>
 <% @issues.items.map do |item| %>
@@ -16,4 +16,4 @@
 <br>
 <br>
 
-<p>The Github Nice Guy.
+<p>The Github Nice Guy.</p>
