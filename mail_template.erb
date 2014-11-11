@@ -1,0 +1,19 @@
+<h1>Hello,</h1>
+
+<br>
+<br>
+
+<p>Here are some pull requests for <%= @user %> that you might want to give a look to:</p>
+
+<ul>
+<% @issues.items.map do |item| %>
+  <li>
+    <a href="<%= item.pull_request.html_url %>"><%= item.title %></a> by <%= item.user.login %>
+  </li>
+<% end %>
+</ul>
+
+<br>
+<br>
+
+<p>The Github Nice Guy.
