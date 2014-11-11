@@ -22,14 +22,14 @@ class GithubNiceGuy
       mail_body = "Hello,<br><br> Here are some pull requests for #{ENV['SEARCH_USER']} that you \
       might want to give a look to:<br><br>"
       issues.items.map do |item|
-        mail_body += "<a href='#{item.pull_request.url}'>#{item.title}</a> by #{item.user.login}<br>"
+        mail_body += "<a href='#{item.pull_request.html_url}'>#{item.title}</a> by #{item.user.login}<br>"
       end
       mail_body += "<br>The Github Nice Guy."
 
       Mail.new do
         from ENV['SMTP_USERNAME']
         to ENV['RECIPIENTS'].split(',')
-        subject "Open #{ENV['SEARCH_USER']} pull requests"
+        subject "[Github Nice Guy] There are #{issues.total_count} open pull requests for #{ENV['SEARCH_USER']}"
 
         html_part do
           content_type 'text/html; charset=UTF-8'
