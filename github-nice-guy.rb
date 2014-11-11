@@ -7,12 +7,12 @@ class GithubNiceGuy
   def self.run
     Mail.defaults do
     delivery_method :smtp,
-        address: ENV['SMTP_ADDRESS'],
-        port: 587,
-        domain: ENV['SMTP_DOMAIN'],
+        address: ENV['SMTP_ADDRESS'] || "smtp.gmail.com",
+        port: ENV['SMTP_PORT'] || 587,
+        domain: ENV['SMTP_DOMAIN'] || "gmail.com",
         user_name: ENV['SMTP_USERNAME'],
         password: ENV['SMTP_PASSWORD'],
-        authentication: 'plain'
+        authentication: ENV['SMTP_AUTH'] || 'plain'
     end
 
     github = Github.new basic_auth: ENV["GITHUB_BASIC_AUTH"]
