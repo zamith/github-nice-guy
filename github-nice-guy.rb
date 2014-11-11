@@ -17,17 +17,17 @@ class GithubNiceGuy
     end
 
     github = Github.new basic_auth: ENV["GITHUB_BASIC_AUTH"]
-    @user = ENV['SEARCH_USER']
-    @issues = github.search.issues q: "type:pr is:open user:#{@user}"
+    @issues = github.search.issues q: "type:pr is:open user:#{ENV['SEARCH_USER']}"
 
     unless @issues.empty?
       template = ERB.new(File.read("mail_template.erb"))
       mail_body = template.result(binding)
 
+      binding.pry
       Mail.new do
         from ENV['SMTP_USERNAME']
         to ENV['RECIPIENTS'].split(',')
-        subject "[Github Nice Guy] There are #{@issues.total_count} open pull requests for #{@user}"
+        subject "[Github Nice Guy] There are #{@issues.total_count} open pull requests for #{ENV['SEARCH_USER']}"
 
         html_part do
           content_type 'text/html; charset=UTF-8'
