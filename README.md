@@ -5,7 +5,7 @@ of reasons ranging from losing interest in the project to a comment that was
 never answered.
 
 Github Nice Guy is a small script that fetches the open pull requests for a
-given user (or organization) and sends a daily friendly reminder with links to them to
+given user (or organization) and sends a weekly friendly reminder with links to them to
 whoever you think should know about it.
 
 This is how it looks:
