@@ -1,3 +1,3 @@
 every :monday, :at => '9 am' do
-  runner "GithubNiceGuy.run"
+  rake 'be_a_nice_guy'
 end
