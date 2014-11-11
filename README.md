@@ -55,11 +55,18 @@ defaults in the comments if none are passed.
 Once the configuration is done, you should be able to run it:
 
 ```
-bundle exec ruby github_nice_guy.rb
+export RUN=true; bundle exec ruby github_nice_guy.rb
 ```
 
-*Note:* The emails is being sent from the same process of the program, so it may
-take a minute or two.
+By default the script does not do anything when ran, thus the setting of the
+`RUN` variable. To make it go back to it's former behaviour, unset the variable.
+
+```
+unset RUN
+```
+
+*Note:* The API call and emails are being sent from the same process of the
+program, so it may take a minute or two, depending on your connection.
 
 ### Cron jobs
 
