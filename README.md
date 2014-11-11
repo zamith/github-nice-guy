@@ -1,14 +1,12 @@
 # Github Nice Guy
 
-Let's face it, open pull requests are often forgotten.
-It can happen for a multitude of reasons,
-ranging from losing interest in the project,
-to a comment that was never answered.
+Let's face it, open pull requests are often forgotten. It can happen for a
+multitude of reasons, ranging from losing interest in the project, to a comment
+that was never answered.
 
-Github Nice Guy is a small Ruby script
-that fetches the open pull requests for a given user (or organization)
-and sends a weekly friendly reminder with links to them
-to whoever you think should know about it.
+Github Nice Guy is a small Ruby script that fetches the open pull requests for a
+given user (or organization) and sends a weekly friendly reminder with links to
+them to whoever you think should know about it.
 
 This is how it looks:
 
@@ -27,8 +25,8 @@ git clone git@github.com:zamith/github-nice-guy.git
 ## Configuration
 
 All the configuration is done through environment variables. Albeit possible to
-use `export` to set all the variables, [dotenv](https://github.com/bkeepers/dotenv) has
-been added for convenience.
+use `export` to set all the variables, [dotenv](https://github.com/bkeepers/dotenv)
+has been added for convenience.
 
 If you've never used dotenv, what it does is read from a `.env` file and load
 all the variables in there into environment variables. A Github Nice Guy
