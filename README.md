@@ -1,12 +1,14 @@
 # Github Nice Guy
 
-Let's face it, open pull requests are forgotten. It can happen for a multitude
-of reasons ranging from losing interest in the project to a comment that was
-never answered.
+Let's face it, open pull requests are often forgotten.
+It can happen for a multitude of reasons,
+ranging from losing interest in the project,
+to a comment that was never answered.
 
-Github Nice Guy is a small script that fetches the open pull requests for a
-given user (or organization) and sends a weekly friendly reminder with links to them to
-whoever you think should know about it.
+Github Nice Guy is a small Ruby script
+that fetches the open pull requests for a given user (or organization)
+and sends a weekly friendly reminder with links to them
+to whoever you think should know about it.
 
 This is how it looks:
 
