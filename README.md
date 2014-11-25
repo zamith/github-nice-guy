@@ -20,6 +20,7 @@ server.
 ```
 cd /any/path/you/like
 git clone git@github.com:zamith/github-nice-guy.git
+bundle install
 ```
 
 ## Configuration
